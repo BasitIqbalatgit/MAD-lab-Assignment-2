@@ -12,7 +12,7 @@ const Stack = createNativeStackNavigator();
 export default function App() {
   return (
     <NavigationContainer >
-      <Stack.Navigator>4
+      <Stack.Navigator>
       <Stack.Screen name='Screen' component={Sc1} options={{headerShown: false}} />
       <Stack.Screen name='nextPage' component = {NextPage} options={{headerShown: false}} />
       </Stack.Navigator>
