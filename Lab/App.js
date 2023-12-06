@@ -5,6 +5,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Sc1 from './src/Components/Screen1';
 import NextPage from './src/Components/next';
 import MyTable from './src/Components/Table';
+import UserProfile from './src/Components/detail';
 
 
 
@@ -23,7 +24,7 @@ export default function App() {
 
     // </NavigationContainer>
     <View>
-      <MyTable />
+      <UserProfile />
     </View>
 
 
