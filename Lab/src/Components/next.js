@@ -1,6 +1,7 @@
 // Home.js
 import React from 'react';
 import { FlatList, StyleSheet, View } from 'react-native';
+import CardTwo from './Card'; // Import your Card component
 import { Button } from 'react-native-elements';
 
 const NextPage = ({ route, navigation }) => {
@@ -12,7 +13,7 @@ const NextPage = ({ route, navigation }) => {
         <FlatList
           data={data}
           renderItem={({ item }) => (
-            <Text>Name:{item.name}</Text>
+<Text>Name:{item.name}</Text>
           )}
           keyExtractor={(item, index) => index.toString()}
         />
