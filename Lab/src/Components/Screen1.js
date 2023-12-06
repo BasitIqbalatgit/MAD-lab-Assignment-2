@@ -14,7 +14,7 @@ import { FlatList } from 'react-native';
 
 import { useNavigation } from '@react-navigation/native';
 
-const TaskForm = () => {
+const Sc1 = () => {
   const [email,setEmail] = useState('');
   const [name, setName] = useState('');
   const [gender, setGender] = useState('male');
@@ -215,7 +215,7 @@ const handleNav =()=>{
             onChangeText={(text) => setSkills(text)}
           />
         </View>
-        
+
         <View>
         <TouchableOpacity style={styles.submitButton} onPress={handleNav}>
           <Text style={styles.submitButtonText}>Submit</Text>
@@ -230,4 +230,4 @@ const handleNav =()=>{
 
 
 
-export default TaskForm;
+export default Sc1;
