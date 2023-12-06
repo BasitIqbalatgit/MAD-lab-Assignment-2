@@ -1,5 +1,7 @@
 import {db} from "../../firebaseConfig"
 
-const postData =async()=>{
-
-}
+export const writeData = async ({data}) => {
+    
+    await setDoc(doc(db, "task", ), { emp });
+    
+  };
