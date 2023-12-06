@@ -9,6 +9,7 @@ const MyTable = () => {
   ];
 
   return (
+    <SafeAreaView>
     <View style={styles.container}>
       <Card>
         <Card.Content>
@@ -30,6 +31,7 @@ const MyTable = () => {
         </Card.Content>
       </Card>
     </View>
+    </SafeAreaView>
   );
 };
 
