@@ -15,14 +15,12 @@ const UserProfile = () => {
   });
 
   const handleEdit = () => {
-    // Handle edit functionality
-    // For example, navigate to an edit screen
+    
     console.log('Edit button clicked');
   };
 
   const handleDelete = () => {
-    // Handle delete functionality
-    // For example, show a confirmation modal
+    
     console.log('Delete button clicked');
   };
 
@@ -56,6 +54,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     padding: 10,
+    marginTop:180
   },
   card: {
     marginVertical: 10,
