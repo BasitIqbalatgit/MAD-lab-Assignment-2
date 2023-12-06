@@ -23,7 +23,7 @@ const MyTable = () => {
 
               {data.map((item, index) => (
                 <DataTable.Row key={index}>
-                  <DataTable.Cell><Text>Select</Text></DataTable.Cell>
+                  <DataTable.Cell>Select</DataTable.Cell>
                   <DataTable.Cell>{item.email}</DataTable.Cell>
                   <DataTable.Cell>{item.name}</DataTable.Cell>
                   <DataTable.Cell>{item.country}</DataTable.Cell>
