@@ -113,7 +113,6 @@ const handleNav =()=>{
   return (
     <SafeAreaView style={{ flex: 1 , alignItems:"center",justifyContent:"center"}}>
       <View style={styles.container}>
-        {/* Email and Name ---------------------------> */}
         <View style={isPortrait() ? { flexDirection: 'column' } : { flexDirection: 'row',width:"100%" }}>
 
        <View style={styles.row}>
@@ -138,7 +137,7 @@ const handleNav =()=>{
       </View>
 
 
-        {/* Gender and Country -----------------------> */}
+
         <View style={isPortrait() ? { flexDirection: 'column' } : { flexDirection: 'row' }}>
 
         <View style={styles.row}>
@@ -176,7 +175,6 @@ const handleNav =()=>{
           </ModalDropdown>
         </View>
         </View>
-        {/* Subjects and Address----------------------------------> */}
         <View style={isPortrait() ? { flexDirection: 'column' } : { flexDirection: 'row' }}>
 
         <View style={styles.row}>
@@ -206,8 +204,6 @@ const handleNav =()=>{
           />
         </View>
         </View>
-
-        {/* Skills -----------------------------------> */}
         <View style= {isPortrait()? {flexDirection:"column"}: {flexDirection:"row"}}>
         <View style={styles.row}>
           <Text>Skills</Text>
@@ -219,10 +215,7 @@ const handleNav =()=>{
             onChangeText={(text) => setSkills(text)}
           />
         </View>
-
-      
-
-        {/* Submit Button ---------------------------> */}
+        
         <View>
         <TouchableOpacity style={styles.submitButton} onPress={handleNav}>
           <Text style={styles.submitButtonText}>Submit</Text>
