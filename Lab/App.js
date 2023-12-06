@@ -1,40 +1,38 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import ShowData from './src/screens/ShowData';
+import Input from './src/screens/Input';
+import DataNavigation from './src/screens/DataNavigation';
 
-import UserProfile from './src/Components/detail';
+const Stack = createStackNavigator();
+const Tab = createMaterialTopTabNavigator();
 
-
-
-const Stack = createNativeStackNavigator();
-
-export default function App() {
+const App = () => {
   return (
-    // <NavigationContainer >
-    //   <Stack.Navigator>
-    //   <Stack.Screen name='Screen' component={Sc1} options={{headerShown: false}} />
-    //   <Stack.Screen name='nextPage' component = {NextPage} options={{headerShown: false}} />
-    //   </Stack.Navigator>
-
-
-
-
-    // </NavigationContainer>
-    <View style={styles.container}>
-      <UserProfile />
-    </View>
-
-
-
+    <NavigationContainer>
+      <Tab.Navigator>
+       
+        <Tab.Screen
+          name='InputData'
+          component={Input}
+          options={{
+            title: 'Input Screen',
+            headerShown: false,
+          }}
+        />
+         <Tab.Screen
+          name='AllData'
+          component={DataNavigation}
+          options={{
+            title:"Show Data",
+            headerShown: false,
+          }}
+        />
+      </Tab.Navigator>
+    </NavigationContainer>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;

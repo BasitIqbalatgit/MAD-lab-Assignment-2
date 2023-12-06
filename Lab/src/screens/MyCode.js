@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import {db} from "../../firebaseConfig";
+import { addDoc } from 'firebase/firestore';
 import {
   SafeAreaView,
   View,
@@ -105,10 +107,13 @@ const styles = StyleSheet.create({
  },
 });
 
-const handleNav =()=>{
+const handleNav =async()=>{
    const newData = [...data, { name, email, gender,selectedCountry, selectedSubjects, skills,address  }];
     setData(newData);
-    navigation.navigate('nextPage', { data: data });
+    // navigation.navigate('nextPage', { data: data });
+    const docRef = await addDoc(collection(db, 'users'), {
+      data
+    }); 
 }
   return (
     <SafeAreaView style={{ flex: 1 , alignItems:"center",justifyContent:"center"}}>
