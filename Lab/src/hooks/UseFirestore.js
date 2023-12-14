@@ -35,6 +35,7 @@ const UseFirestore = () => {
     setIsLoading(false);
     return data;
   };
+
 const updateData = async (originalName, updatedData) => {
   setIsLoading(true);
   const docRef = doc(db, 'persons', originalName); 
@@ -45,6 +46,7 @@ const updateData = async (originalName, updatedData) => {
   }
   setIsLoading(false);
 };
+
   const deleteData = async (name) => {
     setIsLoading(true);
     const docRef = doc(db, 'persons', name); 
